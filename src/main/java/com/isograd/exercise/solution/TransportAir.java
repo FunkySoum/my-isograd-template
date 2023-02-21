@@ -5,18 +5,18 @@
  *  IsoContestBase.localEcho( variable)
  * to display variable in a dedicated area.
  * ***/
-package com.isograd.exercise;
+package com.isograd.exercise.solution;
 
 import java.util.*;
 
 
-public class IsoContest {
+public class TransportAir {
 	
 	private static Vector<String> lines = null;
 	
 	public static void main(String[] argv) throws Exception {
 		
-		IsoContest isoContest = new IsoContest();
+		TransportAir isoContest = new TransportAir();
 		
 		String line;
 		Scanner sc = new Scanner(System.in);
