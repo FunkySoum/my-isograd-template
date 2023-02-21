@@ -5,18 +5,18 @@
  *  IsoContestBase.localEcho( variable)
  * to display variable in a dedicated area.
  * ***/
-package com.isograd.exercise;
+package com.isograd.exercise.solution;
 
 import java.util.*;
 
 
-public class IsoContest {
+public class CourtePaille {
 	
 	private static Vector<String> lines = null;
 	
 	public static void main(String[] argv) throws Exception {
 		
-		IsoContest isoContest = new IsoContest();
+		CourtePaille isoContest = new CourtePaille();
 		
 		String line;
 		Scanner sc = new Scanner(System.in);
@@ -26,7 +26,21 @@ public class IsoContest {
 			lines.add(line);
 		}
 		
+		lines.remove(0);
 		
+		int taille = 1000000000;
+		String nom = "";
+		for(int i=0;i<lines.size();i++) {
+			
+			if(getIntInLines(i, 1)<taille) {
+				
+				taille = getIntInLines(i, 1);
+				nom = getStringInLines(i, 0);
+			}
+			
+		}
+		
+		System.out.println(nom);
 		
 	}
 	
