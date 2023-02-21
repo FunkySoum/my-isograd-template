@@ -5,28 +5,39 @@
  *  IsoContestBase.localEcho( variable)
  * to display variable in a dedicated area.
  * ***/
-package com.isograd.exercise;
+package com.isograd.exercise.solution;
 
 import java.util.*;
 
-	
-public class IsoContest {
+
+public class Soupe {
 	
 	private static Vector<String> lines = null;
 	
 	public static void main(String[] argv) throws Exception {
 		
-		IsoContest isoContest = new IsoContest();
+		Soupe isoContest = new Soupe();
 		
 		String line;
 		Scanner sc = new Scanner(System.in);
 		lines = new Vector<>();
 		while (sc.hasNextLine()) {
 			line = sc.nextLine();
+			System.err.println(line);
 			lines.add(line);
 		}
 		
+		int totalSoupe = getIntInLines(0);
+		int totalTrufe = getIntInLines(1);
 		
+		int bolSoupe = totalSoupe/200;
+		int boltrufe = totalTrufe/15;
+		
+		if(bolSoupe<boltrufe) {
+			System.out.println(bolSoupe);
+		} else {
+			System.out.println(boltrufe);
+		}
 		
 	}
 	
@@ -74,6 +85,4 @@ public class IsoContest {
 	}
 	
 }
-	
-
 
